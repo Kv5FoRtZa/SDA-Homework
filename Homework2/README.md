@@ -3,8 +3,6 @@ This project implements a satellite communication network modeled as a binary tr
 Satellites are organized based on their reporting frequency using a Min-Heap strategy,
 similar to Huffman tree construction.
 
-##  Core Functionality
-
 ### Requirement 
 Build a binary tree from a list of satellites using a Min-Heap:
 - Satellites with smaller frequencies are merged first
