@@ -1,10 +1,19 @@
+##  Description
+This project implements a simplified web browser history system in C.
+The browser supports multiple tabs and page navigation using a circular
+doubly linked list (with sentinel) and stacks for history management.
 
-    Description
+##  Data Structures
+- **Page** – contains ID, URL (max 50 chars), and dynamically allocated description
+- **Tab** – contains ID, pointer to current page, BACKWARD stack, FORWARD stack
+- **Browser** – circular doubly linked list of tabs + pointer to current tab
 
-In this homework, i was required to create a couple structures(a tab, browser and page structure) and then implement a couple of operations with
-those structures.
-
-The operations consist of creating or closing a new tab, moving to another tab, moving to the next or prev tabs, creating a page history,
-iterating through that page history and printing.
-
-The input consists of the number of pages, the pages, the number of operations, and the operations that will be performed on those pages.
+##  Supported Commands
+- `NEW_TAB` – create and switch to a new tab
+- `CLOSE` – close current tab (except tab 0)
+- `OPEN <ID>` – switch to a specific tab
+- `NEXT` / `PREV` – navigate between tabs
+- `PAGE <ID>` – open a page in current tab
+- `BACKWARD` / `FORWARD` – navigate page history
+- `PRINT` – display tab IDs and current page description
+- `PRINT_HISTORY <ID>` – display full history of a tab
